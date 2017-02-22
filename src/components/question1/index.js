@@ -1,3 +1,4 @@
 import React from 'react'
+import Hello from './hello'
 
-export default () => <p>Question 1 goes here</p>
+export default () => <Hello />
