@@ -1,10 +1,10 @@
 import Route from './components/app/route'
 
 import Landing from './components/landing'
-import Question1 from './components/question1'
+import ReactTasks from './components/reactTasks'
 
 export const routes = [
-  { path: 'question1', component: Question1 },
+  { path: 'reactTasks', component: ReactTasks },
 ]
 
 export default {
