@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { addTodo, completeTodo, deleteTodo, updateTodoText } from 'redux/actions/todos'
 import TodoList from 'components/todoList'
 
-console.log('dsfsdsdf')
 class TodolistContainer extends Component {
 
   render() {
