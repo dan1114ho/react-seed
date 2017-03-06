@@ -1,9 +1,6 @@
-import React from 'react' //ignore this
+import React from 'react' // ignore this
 
 // Answers go here!
-
-
-
 
 
 // Ignore this!
