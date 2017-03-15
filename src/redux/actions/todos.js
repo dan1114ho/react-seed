@@ -1,5 +1,5 @@
 export const addTodo = (todo) => {
-  return {type: 'todos/ADD_TODO', payload: todo }
+  return { type: 'todos/ADD_TODO', payload: todo }
 }
 
 export const updateTodoText = (todoText) => {
