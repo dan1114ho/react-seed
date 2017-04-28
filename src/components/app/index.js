@@ -8,7 +8,8 @@ import '../../styles/bootstrap.scss'
 
 const store = createStore()
 
-export default () =>
+export default () => (
   <Provider store={store}>
     <Router history={browserHistory} routes={routes} />
   </Provider>
+)

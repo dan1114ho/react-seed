@@ -5,15 +5,11 @@ import ReactTasks from './components/reactTasks'
 import ImportExportTasks from './components/importExportTasks'
 import TodoList from './containers/todoList'
 
-export const routes = [
-  { path: 'reactTasks', component: ReactTasks },
-  { path: 'importExportTasks', component: ImportExportTasks },
-  { path: 'todoList', component: TodoList },
-]
+export const routes = [{ path: 'reactTasks', component: ReactTasks }, { path: 'importExportTasks', component: ImportExportTasks }, { path: 'todoList', component: TodoList }]
 
 export default {
   path: '/',
   component: Route,
   indexRoute: { component: Landing },
-  childRoutes: routes
+  childRoutes: routes,
 }
