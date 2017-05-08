@@ -15,8 +15,9 @@
     "lint:watch": "nodemon --watch src --exec \"yarn lint:without:prettier\"",
     "lint:js": "eslint ./src",
     "lint:js:without:prettier": "yarn lint:js -- --rule 'prettier/prettier: 0'",
-    "lint:sass": "sass-lint -c sass-lint.yaml -v",
-    "prettier": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
+    "lint:sass": "stylelint 'src/**/*.*css' --syntax scss",
+    "format:sass": "stylefmt --recursive 'src/**/*.*css'",
+    "format:js": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
     "precommit": "lint-staged && yarn lint",
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check"
   },
@@ -49,6 +50,9 @@
     "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "style-loader": "0.13.1",
+    "stylefmt": "^5.3.2",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
     "transform-loader": "^0.2.3",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
@@ -72,8 +76,12 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "yarn prettier --",
+      "yarn format:js --",
       "git add"
-    ]
+     ],
+     "src/**/*.*css": [
+       "stylefmt",
+       "git add"
+     ]
   }
 }
