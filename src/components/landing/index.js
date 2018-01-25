@@ -4,6 +4,6 @@ import { routes } from '../../routes'
 
 export default () => (
   <div>
-    {_.map(routes, (route, i) => <p><a href={route.path} key={i}>{route.path}</a></p>)}
+    {_.map(routes, (route, i) => <p key={i}><a href={route.path}>{route.path}</a></p>)}
   </div>
 )
