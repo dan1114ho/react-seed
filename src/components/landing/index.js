@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import _ from 'lodash'
+import Div from 'components/core/div'
 import { routes } from '../../routes'
 
 export default () => (
-  <div>
-    {_.map(routes, (route, i) => <p key={i}><a href={route.path}>{route.path}</a></p>)}
-  </div>
+  <Div>
+    {_.map(routes, (route, i) => <Link key={i} to={route.path}>{route.path}</Link>)}
+  </Div>
 )
