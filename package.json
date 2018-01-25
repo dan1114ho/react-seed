@@ -44,7 +44,7 @@
     "firebase-tools": "^3.2.2",
     "husky": "^0.13.3",
     "lint-staged": "^3.4.0",
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.7.2",
     "prettier": "^1.2.2",
     "remove-flow-types-loader": "^1.0.0",
     "sass-lint": "^1.10.2",
@@ -78,10 +78,10 @@
     "src/**/*.js": [
       "yarn format:js --",
       "git add"
-     ],
-     "src/**/*.*css": [
-       "stylefmt",
-       "git add"
-     ]
+    ],
+    "src/**/*.*css": [
+      "stylefmt",
+      "git add"
+    ]
   }
 }
