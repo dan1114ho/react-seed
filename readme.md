@@ -1,7 +1,7 @@
 ## Technology Stack
 react, Redux, Javascript ES6
 
-###Pre-requisites
+### Pre-requisites
 
 Latest version of node. (Use NVM)
 
@@ -10,7 +10,7 @@ Install yarn: `npm install -g yarn`
 ### Setup
 `yarn install`
 
-###Running
+### Running
 * Run: `yarn run start`
 
 ## Code Style
