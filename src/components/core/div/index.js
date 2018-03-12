@@ -1,4 +1,6 @@
-import React from 'react'
-import style from './style'
+import styled from 'styled-components'
 
-export default props => <div className={style.div}>{props.children}</div>
+export default styled.div`
+  display: flex;
+  flex-direction: column;
+`
