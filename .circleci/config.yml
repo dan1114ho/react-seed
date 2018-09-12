@@ -27,6 +27,6 @@ jobs:
             command: bin/deploy.sh
 workflows:
   version: 2
-  leadfinder_workflow:
+  workflow:
     jobs:
       - build-test-deploy
