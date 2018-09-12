@@ -24,7 +24,7 @@ jobs:
             name: test
             command: yarn test
         - deploy:
-            command: bin/deploy.sh
+            command: yarn run deploy:ci
 workflows:
   version: 2
   workflow:

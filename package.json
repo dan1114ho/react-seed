@@ -6,6 +6,7 @@
   "scripts": {
     "upgrade": "yarn upgrade-interactive",
     "deploy": "yarn run build && firebase deploy --token \"<TOKEN>\"",
+    "deploy:ci": "yarn run deploy -- --token='1/KwRN4JmOiCZcJ_5eOmDvFkdU4-5qpxHF3l9TbF6zVgE'",
     "test": "yarn lint",
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
