@@ -5,7 +5,10 @@
   "author": "Richard Gill <richard@rgill.co.uk>",
   "scripts": {
     "upgrade": "yarn upgrade-interactive",
-    "deploy": "yarn run build && firebase deploy --token \"<TOKEN>\"",
+    "deploy:dev": "yarn run build && firebase deploy --token='1/KwRN4JmOiCZcJ_5eOmDvFkdU4-5qpxHF3l9TbF6zVgE' --project=\"react-seed-ae755\"",
+    "deploy:prod": "yarn run build && firebase deploy --token='1/KwRN4JmOiCZcJ_5eOmDvFkdU4-5qpxHF3l9TbF6zVgE' --project=\"react-seed-prod\"",
+    "deploy:ci:dev": "yarn run deploy:dev",
+    "deploy:ci:prod": "yarn run deploy:prod",
     "test": "yarn lint",
     "start": "webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
