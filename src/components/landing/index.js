@@ -6,6 +6,10 @@ import { routes } from '../../routes'
 
 export default () => (
   <Div>
-    {_.map(routes, (route, i) => <Link key={i} to={route.path}>{route.path}</Link>)}
+    {_.map(routes, (route, i) => (
+      <Link key={i} to={route.path}>
+        {route.path}
+      </Link>
+    ))}
   </Div>
 )

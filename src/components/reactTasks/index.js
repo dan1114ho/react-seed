@@ -8,7 +8,6 @@ export default () => {
       <Hello />
 
       <p>Question 2 Answer</p>
-
     </div>
   )
 }

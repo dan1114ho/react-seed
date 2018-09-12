@@ -12,7 +12,9 @@ export default () => (
   <Provider store={store}>
     <BrowserRouter history={browserHistory}>
       <div>
-        {_.map(routes, (route, index) => <Route key={index} path={route.path} component={route.component} exact={route.exact} />)}
+        {_.map(routes, (route, index) => (
+          <Route key={index} path={route.path} component={route.component} exact={route.exact} />
+        ))}
       </div>
     </BrowserRouter>
   </Provider>
