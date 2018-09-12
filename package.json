@@ -5,6 +5,7 @@
   "author": "Richard Gill <richard@rgill.co.uk>",
   "scripts": {
     "upgrade": "yarn upgrade-interactive",
+    "check:node": "check-node-version --package",
     "deploy:dev": "yarn run build && firebase deploy --token='1/KwRN4JmOiCZcJ_5eOmDvFkdU4-5qpxHF3l9TbF6zVgE' --project=\"react-seed-ae755\"",
     "deploy:prod": "yarn run build && firebase deploy --token='1/KwRN4JmOiCZcJ_5eOmDvFkdU4-5qpxHF3l9TbF6zVgE' --project=\"react-seed-prod\"",
     "deploy:ci:dev": "yarn run deploy:dev",
@@ -21,6 +22,7 @@
     "lint:sass": "stylelint 'src/**/*.*css' --syntax scss",
     "format:sass": "stylefmt --recursive 'src/**/*.*css'",
     "format:js": "prettier --single-quote --trailing-comma all --no-semi --print-width 180 --write \"src/**/*.js\"",
+    "postinstall": "yarn run check:node",
     "precommit": "lint-staged && yarn lint",
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check"
   },
@@ -64,6 +66,7 @@
   "dependencies": {
     "babel-runtime": "6.22.0",
     "bootstrap-sass": "^3.3.7",
+    "check-node-version": "^3.2.0",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "r-dom": "^2.3.2",
@@ -78,6 +81,9 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "styled-components": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=8"
   },
   "lint-staged": {
     "src/**/*.js": [
